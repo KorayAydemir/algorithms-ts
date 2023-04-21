@@ -1,9 +1,8 @@
 {
-  "include":["./src"],
+  "include": ["./src"],
   "extends": "../tsconfig.shared.json",
-  "compilerOptions":{
-"outDir": "./dist"
-
+  "compilerOptions": {
+    "esModuleInterop":true,
+    "outDir": "./dist"
   }
 }
-
