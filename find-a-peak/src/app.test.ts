@@ -31,6 +31,3 @@ test("Should return a peak from left when only left side is bigger", () => {
   const result = findPeak([1, 6, 2, 2, 4]);
   expect(result).toEqual({ peak: 6, index: 1 })
 })
-
-
-
