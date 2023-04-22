@@ -4,6 +4,8 @@
     "ts-jest": "^29.1.0"
   },
   "scripts": {
-    "test": "jest"
+    "test": "jest",
+    "build": "tsc -p $INIT_CWD/tsconfig.json && node $INIT_CWD/dist/app.js",
+    "dev": "tsc --watch -p $INIT_CWD/tsconfig.json | nodemon $INIT_CWD/dist/app.js"
   }
 }
