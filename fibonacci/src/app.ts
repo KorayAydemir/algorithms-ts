@@ -4,6 +4,17 @@ export default function fib_recursive(n: number): number {
 }
 console.log("recursive (top-down): ", fib_recursive(20))
 
+function fib_tail(n: number, a = 0, b = 1): number {
+  if (n == 0)
+    return a
+  else if (n === 1)
+    return b
+  else
+    return fib_tail(n - 1, b, a + b)
+}
+
+console.log("tail recursive: ", fib_tail(60))
+
 function fib_i_memoized(n: number): number {
   let f = new Array(n + 2)
   let i;
@@ -15,18 +26,6 @@ function fib_i_memoized(n: number): number {
   return f[n];
 }
 console.log("iterative (top-down) memoized: ", fib_i_memoized(60));
-
-function fib_i_not_memoized(n: number): number {
-  let f = new Array(n + 2)
-  let i;
-  f[0] = 0;
-  f[1] = 1;
-  for (i = 2; i <= n; i++) {
-    f[i] = f[i - 1] + f[i - 2];
-  }
-  return f[n];
-}
-console.log("iterative not memoized: ", fib_i_not_memoized(10));
 
 function fib_iterative(n: number): number {
   let curr;
