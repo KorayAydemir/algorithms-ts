@@ -12,8 +12,8 @@ function fib_tail(n: number, a = 0, b = 1): number {
   else
     return fib_tail(n - 1, b, a + b)
 }
-
-console.log("tail recursive: ", fib_tail(60))
+//making input 60000 causes a stackoverflow, which shows that node doesn't have TCO
+console.log("tail recursive: ", fib_tail(60000))
 
 function fib_i_memoized(n: number): number {
   let f = new Array(n + 2)
