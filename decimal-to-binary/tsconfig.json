@@ -1,0 +1,8 @@
+{
+  "include": ["./src"],
+  "extends": "../tsconfig.shared.json",
+  "compilerOptions": {
+    "esModuleInterop":true,
+    "outDir": "./dist"
+  }
+}
